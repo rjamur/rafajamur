@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Jamur | A Composteira e a Lâmina</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e5e5e5;
+            --accent-color: #ff2a2a; /* Vermelho sangue vivo */
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-family: var(--font-mono);
+            color: #888;
+            font-weight: normal;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        blockquote {
+            border-left: 2px solid #333;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #aaa;
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        .footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Glitch Effect no Hover do Título (Frescura de TI que a gente gosta) */
+        h1:hover {
+            text-shadow: 2px 0 var(--accent-color), -2px 0 blue;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            body { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h3>rafajamur.com.br // sysadmin_log_v1.0</h3>
+    </header>
+
+    <main>
+        <h1>A COMPOSTEIRA<br>E A LÂMINA.</h1>
+        <p style="font-size: 1.4rem; color: #bbb;">Ou: Como transformar lixo em vida antes que o sangue seque.</p>
+
+        <p><strong>Não é autoajuda. É autodesmonte.</strong><br>
+        Um livro sobre a liderança dos filhos do meio, a teologia do chão sujo e o dia em que o Guadalupe virou meu calvário.</p>
+
+        <a href="#" class="btn">Ler o Cap. 1: O Vômito e a Graça</a>
+
+        <hr style="border: 0; border-top: 1px dashed #333; margin: 3rem 0;">
+
+        <h2>ESCREVE A PORRA DO LIVRO.</h2>
+        <p>Foi o que a voz me disse.</p>
+        <p>Porque o silêncio adoece. Porque a gente estuda <strong>Paulo Freire, Ken Robinson e Carl Hart</strong> não pra ganhar certificado, mas pra tentar entender por que o mundo dói tanto.</p>
+        <p>Eu sou Rafael Jamur. <span class="highlight">SysAdmin de dia, sobrevivente de noite.</span> Um consultor de TI que resolve problemas complexos com recursos escassos, mas que demorou 40 anos pra resolver o problema da própria voz.</p>
+        <p>Este livro não é sobre mim. É sobre <strong>nós</strong>. Sobre quem busca o Evangelho Puro e Simples no meio da hipocrisia institucional. Sobre quem já sentiu o gosto de ferro na boca e entendeu que a vida é um <em>glitch</em> no sistema.</p>
+
+        <h2>O QUE VOCÊ VAI ENCONTRAR?</h2>
+        <ul>
+            <li><strong>A PEDAGOGIA DA RUA:</strong> O que aprendi trocando ideia com quem a sociedade chama de "nóia" e a Redução de Danos chama de ser humano.</li>
+            <li><strong>O SANGUE NO GUADALUPE:</strong> O relato visceral do dia em que apaguei e acordei sangrando. O "teletransporte" da consciência.</li>
+            <li><strong>A LIDERANÇA DO DIREITO DE ERRAR:</strong> Nós, as "Mamas", os que seguram a onda, também precisamos sangrar.</li>
+            <li><strong>A FILOSOFIA DO BALDE:</strong> Como uma composteira numa ocupação urbana ensina mais sobre Deus do que mil sermões.</li>
+        </ul>
+
+        <blockquote>
+            "O oposto do vício não é a sobriedade. É a conexão." <br>
+            <span style="font-size: 1rem; font-family: var(--font-mono); display:block; margin-top:0.5rem">— Johann Hari (e o espírito deste livro)</span>
+        </blockquote>
+
+        <h2>QUEM É O CARA DO TI?</h2>
+        <p><strong>Rafael Jamur.</strong> Pai do Samuel. Filho de Deus (e do meio). Consultor em Tecnologias da Informação, especialista em fazer gambiarra funcionar como sinfonia.</p>
+        <p>Minhas referências não cabem na prateleira da academia: Vai de Aava Santiago a Eminem. De Clarice Lispector a Imagine Dragons. De Jesus Cristo a Tupac.</p>
+
+        <div style="margin-top: 3rem; border: 1px solid #333; padding: 2rem; text-align: center;">
+            <h3 style="color: #fff; margin-bottom: 1rem;">ACOMPANHE O PROCESSO</h3>
+            <p>Eu não estou entregando um produto pronto. Estou convidando você para ver a ferida cicatrizar em tempo real.</p>
+            <input type="email" placeholder="Seu melhor e-mail" style="padding: 10px; width: 60%; background: #000; border: 1px solid #555; color: #fff; font-family: var(--font-mono);">
+            <button style="padding: 10px 20px; background: var(--accent-color); border: none; color: #000; font-weight: bold; cursor: pointer;">ENVIAR</button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Rafael Jamur. Feito com ódio, amor e HTML puro.</p>
+    </footer>
+
+</body>
+</html>
