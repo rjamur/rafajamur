@@ -1,231 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Jamur | A Composteira e a Lâmina</title>
+    <title>Rafael Jamur | Tecnologia, Ética e Pesquisa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e5e5e5;
-            --accent-color: #ff2a2a; /* Vermelho sangue vivo */
-            --font-serif: 'Georgia', 'Times New Roman', serif;
-            --font-mono: 'Courier New', Courier, monospace;
-        }
-
-        * {
-            box-sizing: border-box;
+        body {
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-mono);
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #2c3e50;
             line-height: 1.6;
-            padding: 2rem;
-            max-width: 800px;
+        }
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 20px;
         }
-
-        h1, h2, h3 {
-            font-family: var(--font-serif);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: -0.05em;
-            margin-bottom: 1rem;
-            color: #fff;
+        header {
+            padding: 80px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
         }
-
-        h1 {
-            font-size: 3.5rem;
-            line-height: 1.1;
-            border-bottom: 4px solid var(--accent-color);
-            padding-bottom: 1rem;
-            margin-top: 2rem;
+        header h1 {
+            font-size: 2.8rem;
+            color: #1a252f;
+            margin: 0;
+            letter-spacing: -1px;
         }
-
-        h2 {
-            font-size: 2rem;
-            margin-top: 3rem;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 1rem;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-family: var(--font-mono);
-            color: #888;
-            font-weight: normal;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
+        header p {
             font-size: 1.1rem;
-        }
-
-        .highlight {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        blockquote {
-            border-left: 2px solid #333;
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: #aaa;
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        ul li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        ul li::before {
-            content: ">";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-weight: bold;
+            color: #7f8c8d;
             text-transform: uppercase;
-            margin-top: 1rem;
-            transition: all 0.2s ease;
-            border: 1px solid var(--accent-color);
+            letter-spacing: 2px;
+            margin-top: 10px;
         }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--accent-color);
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            padding: 60px 0;
         }
-
-        .footer {
-            margin-top: 5rem;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-            font-size: 0.9rem;
-            color: #666;
+        .bio {
+            flex: 3;
+            min-width: 300px;
+        }
+        .bio h2 {
+            font-size: 1.8rem;
+            color: #2980b9;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .bio p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .sidebar {
+            flex: 2;
+            min-width: 280px;
+        }
+        .box {
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .box-expertise {
+            background-color: #f8f9fa;
+            border-left: 6px solid #2980b9;
+        }
+        .box-citizenship {
+            background-color: #fff9e6;
+            border: 1px solid #ffeeba;
             text-align: center;
         }
-
-        /* Glitch Effect no Hover do Título (Frescura de TI que a gente gosta) */
-        h1:hover {
-            text-shadow: 2px 0 var(--accent-color), -2px 0 blue;
+        .box h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #1a252f;
+            margin-bottom: 15px;
         }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            body { padding: 1.5rem; }
+        .box ul {
+            padding-left: 20px;
+            margin: 0;
         }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+        .box li {
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
-
-        .social-links a {
-            color: #666;
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #2c3e50;
+            color: #ffffff;
             text-decoration: none;
-            font-family: var(--font-mono);
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+        }
+        footer {
+            padding: 40px 0;
+            text-align: center;
             font-size: 0.9rem;
-            transition: color 0.2s ease;
+            color: #95a5a6;
+            border-top: 1px solid #f0f0f0;
         }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            text-shadow: 0 0 8px rgba(255, 42, 42, 0.4);
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .main-content { gap: 30px; }
         }
-
-
     </style>
 </head>
 <body>
 
     <header>
-        <h3>rafajamur.com.br // sysadmin_log_v1.0</h3>
+        <div class="container">
+            <h1>Rafael Jamur</h1>
+            <p>Técnico da UFPR | Consultor de Tecnologia | Pesquisador</p>
+        </div>
     </header>
 
-    <main>
-        <h1>A COMPOSTEIRA<br>E A LÂMINA.</h1>
-        <p style="font-size: 1.4rem; color: #bbb;">Ou: Como transformar lixo em vida antes que o sangue seque.</p>
-
-        <p><strong>Não é autoajuda. É autodesmonte.</strong><br>
-        Um livro sobre a liderança dos filhos do meio, a teologia do chão sujo e o dia em que o Guadalupe virou meu calvário.</p>
-
-        <a href="#" class="btn">Ler o Cap. 1: O Vômito e a Graça</a>
-
-        <hr style="border: 0; border-top: 1px dashed #333; margin: 3rem 0;">
-
-        <h2>ESCREVE A PORRA DO LIVRO.</h2>
-        <p>Foi o que a voz me disse.</p>
-        <p>Porque o silêncio adoece. Porque a gente estuda <strong>Paulo Freire, Ken Robinson e Carl Hart</strong> não pra ganhar certificado, mas pra tentar entender por que o mundo dói tanto.</p>
-        <p>Eu sou Rafael Jamur. <span class="highlight">SysAdmin de dia, sobrevivente de noite.</span> Um consultor de TI que resolve problemas complexos com recursos escassos, mas que demorou 40 anos pra resolver o problema da própria voz.</p>
-        <p>Este livro não é sobre mim. É sobre <strong>nós</strong>. Sobre quem busca o Evangelho Puro e Simples no meio da hipocrisia institucional. Sobre quem já sentiu o gosto de ferro na boca e entendeu que a vida é um <em>glitch</em> no sistema.</p>
-
-        <h2>O QUE VOCÊ VAI ENCONTRAR?</h2>
-        <ul>
-            <li><strong>A PEDAGOGIA DA RUA:</strong> O que aprendi trocando ideia com quem a sociedade chama de "nóia" e a Redução de Danos chama de ser humano.</li>
-            <li><strong>O SANGUE NO GUADALUPE:</strong> O relato visceral do dia em que apaguei e acordei sangrando. O "teletransporte" da consciência.</li>
-            <li><strong>A LIDERANÇA DO DIREITO DE ERRAR:</strong> Nós, as "Mamas", os que seguram a onda, também precisamos sangrar.</li>
-            <li><strong>A FILOSOFIA DO BALDE:</strong> Como uma composteira numa ocupação urbana ensina mais sobre Deus do que mil sermões.</li>
-        </ul>
-
-        <blockquote>
-            "O oposto do vício não é a sobriedade. É a conexão." <br>
-            <span style="font-size: 1rem; font-family: var(--font-mono); display:block; margin-top:0.5rem">— Johann Hari (e o espírito deste livro)</span>
-        </blockquote>
-
-        <h2>QUEM É O CARA DO TI?</h2>
-        <p><strong>Rafael Jamur.</strong><br>
-        Pai da Carol, da Esther e do Samuel.<br>
-        Avô do Derick Rafael e do Thales.</p>
-        
-        <p>Filho de Deus (e do meio). Consultor em Tecnologias da Informação, especialista em fazer gambiarra funcionar como sinfonia.</p>
-        
-        <p>Minhas referências não cabem na prateleira da academia: Vai de Aava Santiago a Eminem. De Clarice Lispector a Imagine Dragons. De Jesus Cristo a Tupac.</p>
-    
-        <div style="margin-top: 3rem; border: 1px solid #333; padding: 2rem; text-align: center;">
-            <h3 style="color: #fff; margin-bottom: 1rem;">ACOMPANHE O PROCESSO</h3>
-            <p>Eu não estou entregando um produto pronto. Estou convidando você para ver a ferida cicatrizar em tempo real.</p>
- 
-            <iframe src="https://rafajamur.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+    <main class="container">
+        <div class="main-content">
             
-        </div>
+            <section class="bio">
+                <h2>Perfil Técnico e Ético</h2>
+                <p>
+                    Sou especialista em infraestrutura de TI com uma carreira pautada pela transparência e pelo compromisso institucional. Como <strong>Técnico da UFPR</strong>, atuo no suporte a sistemas complexos, integrando o conhecimento técnico às necessidades da pesquisa e do ensino público.
+                </p>
+                <p>
+                    Minha trajetória inclui sólida experiência internacional na prestação de serviços para os <strong>Serviços Partilhados do Ministério da Saúde (SPMS)</strong> em Portugal, através da <strong>Ignit (Grupo Claranet)</strong>. No Algarve, gerenciei infraestruturas críticas e enfrentei os desafios da ética digital e da segurança da informação.
+                </p>
+                <p>
+                    Acredito que o domínio da tecnologia exige uma responsabilidade ética inegociável. Minha atuação é guiada pela defesa da privacidade e pela denúncia de abusos de privilégio administrativo, princípios que aplico tanto no ambiente corporativo quanto na esfera da cidadania.
+                </p>
+            </section>
 
-        <div style="margin-top: 3rem; text-align: center;">
-            <p style="margin-bottom: 1rem; color: #888; font-size: 0.9rem;">// CONECTAR AO SISTEMA:</p>
-            <div class="social-links">
-                <a href="https://rafajamur.substack.com" target="_blank">[ SUBSTACK ]</a>
-                <a href="https://instagram.com/rafajamur" target="_blank">[ INSTAGRAM ]</a>
-                <a href="https://youtube.com/@RafaJamur" target="_blank">[ YOUTUBE ]</a>
-                <a href="https://linkedin.com/in/jamur" target="_blank">[ LINKEDIN ]</a>
-            </div>
+            <aside class="sidebar">
+                
+                <div class="box box-expertise">
+                    <h3>Expertise Técnica</h3>
+                    <ul>
+                        <li>Administração de Sistemas Críticos</li>
+                        <li>Segurança e Ética de Dados</li>
+                        <li>Gestão de Infraestrutura Internacional</li>
+                        <li>Layout Dvorak e Otimização de Processos</li>
+                    </ul>
+                </div>
+
+                <div class="box box-citizenship">
+                    <h3>Cidadania e Direitos</h3>
+                    <p>Documentação e análise técnica de higienismo urbano e vigilância social.</p>
+                    <p style="font-weight: bold;">Confira o Dossiê: A Estética do Medo</p>
+                    <span style="font-size: 1.5rem;">👇</span><br>
+                    <a href="https://malocaperalta.com.br" class="cta-button" target="_blank">MALOCAPERALTA.COM.BR</a>
+                </div>
+
+            </aside>
         </div>
-    
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Rafael Jamur. Feito com ódio, amor e HTML puro.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rafael Jamur. Compromisso com a Verdade e a Tecnologia.</p>
+        </div>
     </footer>
 
 </body>
