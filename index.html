@@ -1,179 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Jamur | Tecnologia, Ética e Pesquisa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Rafael Jamur - Conectando Propósito, Tecnologia e Evangelho Simples.">
+    <title>Rafael Jamur | Conexão Real</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body {
+        :root {
+            --bg-color: #0a0a0a;       /* O escuro do caos criativo */
+            --text-color: #f0f0f0;     /* A luz da clareza */
+            --accent-color: #FFD700;   /* Ouro/Amarelo - Destaque vibrante */
+            --btn-bg: #1a1a1a;
+            --btn-hover: #2a2a2a;
+        }
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #2c3e50;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            padding: 80px 0 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
             text-align: center;
-            border-bottom: 1px solid #f0f0f0;
         }
-        header h1 {
-            font-size: 2.8rem;
-            color: #1a252f;
-            margin: 0;
+
+        /* A IDENTIDADE */
+        .profile-container {
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
             letter-spacing: -1px;
         }
-        header p {
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        .tagline {
             font-size: 1.1rem;
-            color: #7f8c8d;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 10px;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: 300;
         }
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 60px;
-            padding: 60px 0;
-        }
+
         .bio {
-            flex: 3;
-            min-width: 300px;
-        }
-        .bio h2 {
-            font-size: 1.8rem;
-            color: #2980b9;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #3498db;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        .bio p {
-            font-size: 1.15rem;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .sidebar {
-            flex: 2;
-            min-width: 280px;
-        }
-        .box {
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-        .box-expertise {
-            background-color: #f8f9fa;
-            border-left: 6px solid #2980b9;
-        }
-        .box-citizenship {
-            background-color: #fff9e6;
-            border: 1px solid #ffeeba;
-            text-align: center;
-        }
-        .box h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
-            color: #1a252f;
-            margin-bottom: 15px;
-        }
-        .box ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-        .box li {
-            margin-bottom: 10px;
+            margin-bottom: 2.5rem;
             font-size: 1rem;
+            color: #ccc;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+            text-align: left;
         }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #2c3e50;
-            color: #ffffff;
+
+        /* OS LINKS (BOTÕES) */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centralizado mobile first */
+            background-color: var(--btn-bg);
+            color: var(--text-color);
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: 0.3s;
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
         }
-        .cta-button:hover {
-            background-color: #34495e;
+
+        .link-btn i {
+            margin-right: 12px;
+            font-size: 1.4rem;
+        }
+
+        .link-btn:hover {
+            background-color: var(--btn-hover);
             transform: translateY(-2px);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
         }
+
+        /* O MANIFESTO (RODAPÉ) */
         footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #95a5a6;
-            border-top: 1px solid #f0f0f0;
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #555;
+            font-style: italic;
         }
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .main-content { gap: 30px; }
+
+        /* ANIMAÇÃO */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* RESPONSIVIDADE */
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .link-btn { justify-content: flex-start; padding-left: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Rafael Jamur</h1>
-            <p>Técnico da UFPR | Consultor de Tecnologia | Pesquisador</p>
-        </div>
-    </header>
+    <div class="profile-container">
+        <h1>RAFAEL <span>JAMUR</span></h1>
+        <p class="tagline">Conectando Propósito, Caos e Realidade</p>
 
-    <main class="container">
-        <div class="main-content">
+        <div class="bio">
+            <p>Movido pelo Evangelho puro e simples e por perguntas difíceis. Aqui a gente fala de tecnologia, vida e das conexões que nos tornam humanos. Sem filtro.</p>
+        </div>
+
+        <div class="links-container">
             
-            <section class="bio">
-                <h2>Perfil Técnico e Ético</h2>
-                <p>
-                    Sou especialista em infraestrutura de TI com uma carreira pautada pela transparência e pelo compromisso institucional. Como <strong>Técnico da UFPR</strong>, atuo no suporte a sistemas complexos, integrando o conhecimento técnico às necessidades da pesquisa e do ensino público.
-                </p>
-                <p>
-                    Minha trajetória inclui sólida experiência internacional na prestação de serviços para os <strong>Serviços Partilhados do Ministério da Saúde (SPMS)</strong> em Portugal, através da <strong>Ignit (Grupo Claranet)</strong>. No Algarve, gerenciei infraestruturas críticas e enfrentei os desafios da ética digital e da segurança da informação.
-                </p>
-                <p>
-                    Acredito que o domínio da tecnologia exige uma responsabilidade ética inegociável. Minha atuação é guiada pela defesa da privacidade e pela denúncia de abusos de privilégio administrativo, princípios que aplico tanto no ambiente corporativo quanto na esfera da cidadania.
-                </p>
-            </section>
+            <a href="https://wa.me/5541992313435" class="link-btn" target="_blank">
+                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                Chama no Whats (Trocar Ideia)
+            </a>
 
-            <aside class="sidebar">
-                
-                <div class="box box-expertise">
-                    <h3>Expertise Técnica</h3>
-                    <ul>
-                        <li>Administração de Sistemas Críticos</li>
-                        <li>Segurança e Ética de Dados</li>
-                        <li>Gestão de Infraestrutura Internacional</li>
-                        <li>Layout Dvorak e Otimização de Processos</li>
-                    </ul>
-                </div>
+            <a href="https://youtube.com/@rafajamur" class="link-btn" target="_blank">
+                <i class="fab fa-youtube" style="color: #FF0000;"></i>
+                YouTube (Conteúdo Profundo)
+            </a>
 
-                <div class="box box-citizenship">
-                    <h3>Cidadania e Direitos</h3>
-                    <p>Documentação e análise técnica de higienismo urbano e vigilância social.</p>
-                    <p style="font-weight: bold;">Confira o Dossiê: A Estética do Medo</p>
-                    <span style="font-size: 1.5rem;">👇</span><br>
-                    <a href="https://malocaperalta.com.br" class="cta-button" target="_blank">MALOCAPERALTA.COM.BR</a>
-                </div>
+            <a href="https://instagram.com/rafajamur" class="link-btn" target="_blank">
+                <i class="fab fa-instagram" style="color: #E1306C;"></i>
+                Instagram (Dia a Dia)
+            </a>
 
-            </aside>
+            <a href="https://linkedin.com/in/jamur" class="link-btn" target="_blank">
+                <i class="fab fa-linkedin" style="color: #0077B5;"></i>
+                LinkedIn (Projetos & Carreira)
+            </a>
+
+            <a href="https://facebook.com/rafajamur" class="link-btn" target="_blank">
+                <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                Facebook
+            </a>
+
         </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rafael Jamur. Compromisso com a Verdade e a Tecnologia.</p>
-        </div>
-    </footer>
+        <footer>
+            "Escreve a porra do livro." — A vida não espera.
+        </footer>
+    </div>
 
 </body>
 </html>
